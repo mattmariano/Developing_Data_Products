@@ -1,0 +1,16 @@
+{
+    "contents" : "---\ntitle       : Developing Data Products\nsubtitle    : Configurable Normal Distribution Grapher\nauthor      : Matthew Mariano\njob         : \nframework   : io2012        # {io2012, html5slides, shower, dzslides, ...}\nhighlighter : highlight.js  # {highlight.js, prettify, highlight}\nhitheme     : tomorrow      # \nwidgets     : [mathjax]            # {mathjax, quiz, bootstrap}\nmode        : selfcontained # {standalone, draft}\nknit        : slidify::knit2slides\n---\n\n## Introduction\n\nThe Normal distribution or Guassian ia an extremely important distibution.\nMany natural and social phenomenon can be approximated by the Normal.\nWith this in mind this shiny application introduces the beginner to the normal distribution\nand allows the parameters for drawing it to be easily selected.\n\nThe Equation for the Normal or Guassian Distribution\n\n$$\\frac{e^-((X-\\mu)/(2 \\sigma^2))}{\\Bigl(\\sqrt{2 \\pi}\\Bigr)}$$\n- X is a random variable\n- sigma is the standard deviation\n- mu is the mean\n\nFrom this we see that the parameters are sigma and mu.\n\n\n--- .class #id \n\n## R Generated Normal Distribution with mean 0 and standard deviation 1.\n\n```{r,echo=FALSE}\n x=rnorm(1000,mean=0,sd=1)\n hist(x,xlab='x',col='lightblue',main='R Generated Gaussian with mean 0 and sd 1',breaks=30)\n```\n\n--- \n\n## The User Interface\nThe ui makes it generating your favorite normal distributions **so** simple.\nWhile the hours away enjoying this most useful application.\n\nThe ui has the following components\n-  a sliderbar for the mean\n-  a sliderbar for the standard deviation\n-  a submit button\n\nMake your selection and hit Submit. It's **that** easy !!!\n\n---\n\n## The Server Component\n\nAfter the user clicks the submit the following occurs.\n- the html is submitted to the server component\n- the server component calculates the variance from the submitted mean\n- the distribution is plotted\n- the selections are displayed \n\n\nI hope you enjoy using the Configurable Normal Distribution Grapher as much as I did in producing it!!!\n",
+    "created" : 1422212037218.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2939959524",
+    "id" : "3208E253",
+    "lastKnownWriteTime" : 1422219389,
+    "path" : "~/Documents/__learning/_coursera/developingDataProducts/assignment/slidify_project/slidify_project/index.Rmd",
+    "project_path" : "slidify_project/index.Rmd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

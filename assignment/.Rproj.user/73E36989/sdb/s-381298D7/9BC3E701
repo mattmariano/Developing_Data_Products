@@ -1,0 +1,17 @@
+{
+    "contents" : "shinyUI(\npageWithSidebar(\n  #Matts Incredible Predictor\n  headerPanel(\"Configurable Normal Distribution\"),\n  sidebarPanel(\n    ##numericInput('glucose','Gluscoe mg/dl', 90, min=50,max=200,step=5),\n    sliderInput('mu','enter the mean',value=70,min=62,max=74,step=.05),\n    sliderInput('sd','enter the standard deviation',value=70,min=1,max=20,step=.05),\n    submitButton('submit')\n    ),\n  mainPanel(\n    h3('Results '),\n    h4('You Entered mean='),\n    verbatimTextOutput(\"inputmu\"),\n    h4('You Entered sd='),\n    verbatimTextOutput(\"inputsd\"),\n    h4('server claculated variance'),\n    verbatimTextOutput(\"inputvar\"),\n    plotOutput(\"histogram\")\n    )\n  )\n)\n",
+    "created" : 1422197336467.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "691986309",
+    "id" : "9BC3E701",
+    "lastKnownWriteTime" : 1422203599,
+    "path" : "~/Documents/__learning/_coursera/developingDataProducts/assignment/ui.R",
+    "project_path" : "ui.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

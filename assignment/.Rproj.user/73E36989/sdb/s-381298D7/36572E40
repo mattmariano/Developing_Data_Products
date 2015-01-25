@@ -1,0 +1,17 @@
+{
+    "contents" : "library(shiny)\nlibrary(UsingR)\ndata(galton)\ncalculatevariance <- function(sd2) sd2*sd2\nshinyServer(\n  function(input,output){\n    output$inputmu=renderPrint({input$mu})\n    output$inputsd=renderPrint({input$sd})\n    output$inputvar=renderPrint({calculatevariance(input$sd)})\n    output$histogram=renderPlot({\n      x=rnorm(1000,mean=input$mu,sd=input$sd)\n      hist(x,xlab='x',col='lightblue',main='HISTOGRAM',breaks=30)\n      mu=input$mu\n      sd=input$sd\n      v=calculatevariance(sd)\n      lines(c(mu,mu),c(0,200),col=\"red\",lwd=5)\n      lines(c(mu-sd,mu+sd),c(5,5),col=\"red\",lwd=5)\n      text(10,10,paste(\"variance = \", round(v,2)))\n    })\n  }\n  )",
+    "created" : 1422197737400.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "924097273",
+    "id" : "36572E40",
+    "lastKnownWriteTime" : 1422203533,
+    "path" : "~/Documents/__learning/_coursera/developingDataProducts/assignment/server.R",
+    "project_path" : "server.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
